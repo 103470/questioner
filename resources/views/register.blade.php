@@ -61,7 +61,7 @@
                                                 </div>
                                             </div>
                                             <div class="mt-4 mb-0">
-                                                <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">Fiók létrehozása</a></div>
+                                             <button type="submit" class="btn btn-primary btn-user btn-block">Fiók létrehozása</button>
                                             </div>
                                         </form>
                                     </div>
