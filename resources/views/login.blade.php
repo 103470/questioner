@@ -32,11 +32,11 @@
                                                 </div>
                                             @endif
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
+                                                <input name="email" class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
                                                 <label for="inputEmail">Email cím: </label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputPassword" type="password" placeholder="Password" />
+                                                <input name="password" class="form-control" id="inputPassword" type="password" placeholder="Password" />
                                                 <label for="inputPassword">Jelszó</label>
                                             </div>
                                             <div class="form-check mb-3">
