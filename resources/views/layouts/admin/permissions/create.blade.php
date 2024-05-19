@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container-fluid">
-    
+
     @if($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -16,22 +16,21 @@
         <div class="card shadow">
             <div class="card-header">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">{{ __('Kategória szerkesztése')}}</h1>
-                    <a href="{{ route('admin.categories.index') }}" class="btn btn-primary btn-sm shadow-sm">{{ __('Vissza') }}</a>
+                    <h1 class="h3 mb-0 text-gray-800">{{ __('Engedély létrehozása') }}</h1>
+                    <a href="{{ route('admin.permissions.index') }}" class="btn btn-primary btn-sm shadow-sm">{{ __('Vissza') }}</a>
                 </div>
             </div>
             <div class="card-body">
-                <form action="{{ route('admin.categories.update', $category->id) }}" method="POST">
+                <form action="{{ route('admin.permissions.store') }}" method="POST">
                     @csrf
-                    @method('put')
                     <div class="form-group">
-                        <label for="name">name</label>
-                        <input type="text" class="form-control" id="name" placeholder="name" name="name" value="{{ old('name', $category->name) }}" />
+                        <label for="title">{{ __('Cím') }}</label>
+                        <input type="text" class="form-control" id="title" placeholder="{{ __('Title') }}" name="title" value="{{ old('title') }}" />
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">{{ __('Mentés')}}</button>
+                    <button type="submit" class="btn btn-primary btn-block">{{ __('Mentés') }}</button>
                 </form>
             </div>
         </div>
-
+    
 </div>
 @endsection
