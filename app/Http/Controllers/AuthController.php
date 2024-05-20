@@ -17,7 +17,8 @@ class AuthController extends Controller
     public function save(Request $request){
         Validator::make($request->all(), [
             'name' => 'required',
-            'email' => 'required|uniqe',
+            'email' => ['required',
+                        'unique:users'],
             'password' => 'required|confirmed',
 
         ])->validate();
